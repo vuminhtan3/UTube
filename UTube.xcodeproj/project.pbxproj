@@ -14,6 +14,7 @@
 		B435991E2A477DB800FF155E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435991D2A477DB800FF155E /* Router.swift */; };
 		B43599202A47807800FF155E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435991F2A47807800FF155E /* Model.swift */; };
 		B43599222A48532700FF155E /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43599212A48532700FF155E /* NetworkConstants.swift */; };
+		B43599242A492D3F00FF155E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43599232A492D3F00FF155E /* Response.swift */; };
 		B46D03092A445201006BBFA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D03082A445201006BBFA1 /* AppDelegate.swift */; };
 		B46D030B2A445201006BBFA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D030A2A445201006BBFA1 /* SceneDelegate.swift */; };
 		B46D030D2A445201006BBFA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46D030C2A445201006BBFA1 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		B435991D2A477DB800FF155E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B435991F2A47807800FF155E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B43599212A48532700FF155E /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		B43599232A492D3F00FF155E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B46D03052A445201006BBFA1 /* UTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46D03082A445201006BBFA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46D030A2A445201006BBFA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +145,10 @@
 		B43599152A4775FA00FF155E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B435991B2A477BDF00FF155E /* Video.swift */,
 				B435991D2A477DB800FF155E /* Router.swift */,
 				B435991F2A47807800FF155E /* Model.swift */,
+				B43599232A492D3F00FF155E /* Response.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -160,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				B43599182A47767800FF155E /* NetworkConstants */,
-				B435991B2A477BDF00FF155E /* Video.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				B46D030D2A445201006BBFA1 /* ViewController.swift in Sources */,
 				B435991C2A477BDF00FF155E /* Video.swift in Sources */,
 				B46D03092A445201006BBFA1 /* AppDelegate.swift in Sources */,
+				B43599242A492D3F00FF155E /* Response.swift in Sources */,
 				B435991E2A477DB800FF155E /* Router.swift in Sources */,
 				B46D030B2A445201006BBFA1 /* SceneDelegate.swift in Sources */,
 				B435991A2A4776A300FF155E /* NetworkConstantsTemplate.swift in Sources */,
