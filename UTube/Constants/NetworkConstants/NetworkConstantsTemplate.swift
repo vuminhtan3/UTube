@@ -13,6 +13,8 @@ struct Constants {
     static var playlistId = ""
     static let domain = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet"
     static var apiURL = "\(Constants.domain)&playlistId=\(Constants.playlistId)&key=\(Constants.apiKey)"
-
+    
+    static var videoCellId = "VideoCell"
+ 
 }
 */

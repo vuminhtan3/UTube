@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UTube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BRP-HR-8s2">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8qY-fh-wAE">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qY-fh-wAE" id="16q-GB-AVa">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woy-w0-nft">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouTube_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5TP-kg-des">
+                                        <rect key="frame" x="10" y="0.0" width="120" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="jdj-td-FNI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6l-8j-2zm">
+                                        <rect key="frame" x="353" y="1" width="40" height="38.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="1ku-Y4-fgG"/>
+                                            <constraint firstAttribute="height" constant="40" id="b4d-us-N4H"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="person.circle" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWb-tB-MXw">
+                                        <rect key="frame" x="298" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="eNs-dR-6jG"/>
+                                            <constraint firstAttribute="height" constant="40" id="wo4-II-OXj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2d-QU-Jjc">
+                                        <rect key="frame" x="243" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="T5b-ti-2En"/>
+                                            <constraint firstAttribute="height" constant="40" id="pON-cl-br1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="C2d-QU-Jjc" secondAttribute="bottom" id="2eh-4R-8a9"/>
+                                    <constraint firstAttribute="height" constant="40" id="5eI-xa-Mr5"/>
+                                    <constraint firstItem="C2d-QU-Jjc" firstAttribute="top" secondItem="woy-w0-nft" secondAttribute="top" id="6X9-Zu-rUV"/>
+                                    <constraint firstItem="ZWb-tB-MXw" firstAttribute="top" secondItem="woy-w0-nft" secondAttribute="top" id="HX0-xk-tkm"/>
+                                    <constraint firstItem="X6l-8j-2zm" firstAttribute="leading" secondItem="ZWb-tB-MXw" secondAttribute="trailing" constant="15" id="NmN-K3-9LQ"/>
+                                    <constraint firstItem="ZWb-tB-MXw" firstAttribute="leading" secondItem="C2d-QU-Jjc" secondAttribute="trailing" constant="15" id="aiS-q7-Pao"/>
+                                    <constraint firstItem="5TP-kg-des" firstAttribute="leading" secondItem="woy-w0-nft" secondAttribute="leading" constant="10" id="bVJ-1y-XLN"/>
+                                    <constraint firstAttribute="bottom" secondItem="X6l-8j-2zm" secondAttribute="bottom" id="h0Z-9x-ycU"/>
+                                    <constraint firstItem="5TP-kg-des" firstAttribute="top" secondItem="woy-w0-nft" secondAttribute="top" id="oPo-4w-Vei"/>
+                                    <constraint firstAttribute="trailing" secondItem="X6l-8j-2zm" secondAttribute="trailing" id="oTG-zm-q1C"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWb-tB-MXw" secondAttribute="bottom" id="q0J-8Z-SzR"/>
+                                    <constraint firstItem="X6l-8j-2zm" firstAttribute="top" secondItem="woy-w0-nft" secondAttribute="top" id="w4v-Wc-Abp"/>
+                                    <constraint firstAttribute="bottom" secondItem="5TP-kg-des" secondAttribute="bottom" id="xbg-aF-BW8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BRP-HR-8s2" secondAttribute="bottom" id="9jX-us-Dss"/>
+                            <constraint firstItem="BRP-HR-8s2" firstAttribute="top" secondItem="woy-w0-nft" secondAttribute="bottom" id="BdG-4q-YHp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BRP-HR-8s2" secondAttribute="trailing" id="Iv4-Xd-q34"/>
+                            <constraint firstItem="woy-w0-nft" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UjR-1I-DeL"/>
+                            <constraint firstItem="woy-w0-nft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xv9-U9-ezX"/>
+                            <constraint firstItem="BRP-HR-8s2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a9e-mg-peQ"/>
+                            <constraint firstItem="woy-w0-nft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f3u-gB-rEw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BRP-HR-8s2" id="ORi-jg-pcV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.58778625954199" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="YouTube_logo" width="794" height="178"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -13,6 +13,7 @@ struct Video: Decodable {
     var description = ""
     var thumbnail = ""
     var publishedAt: Date
+    var channelTitle = ""
     
     enum CodingKeys: String, CodingKey {
         case snippet
@@ -25,6 +26,7 @@ struct Video: Decodable {
         case description
         case thumbnail = "url"
         case publishedAt
+        case channelTitle
     }
     
     init(from decoder: Decoder) throws {
@@ -36,6 +38,9 @@ struct Video: Decodable {
         
         //Parse description
         self.description = try snippetContainer.decode(String.self, forKey: .description)
+        
+        //Parse channel title
+        self.channelTitle = try snippetContainer.decode(String.self, forKey: .channelTitle)
         
         //Parse the publish date
         self.publishedAt = try snippetContainer.decode(Date.self, forKey: .publishedAt)
