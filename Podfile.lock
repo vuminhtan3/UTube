@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.7.1)
+  - YouTubePlayer (0.7.2)
 
 DEPENDENCIES:
   - Alamofire
+  - YouTubePlayer
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - YouTubePlayer
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: b6b64189f513db43a3132d958e38d97150a2cbdd
+PODFILE CHECKSUM: 270145b05c9f456dcbd3fbbe500a3a93abf57754
 
 COCOAPODS: 1.11.3

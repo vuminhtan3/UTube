@@ -44,9 +44,7 @@ class VideoTableViewCell: UITableViewCell {
         self.viewsCountLb.text = "197k views"
         
         //Set date label
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "dd-MM-yyyy HH:mm"
-        self.dateLb.text = dateFormater.string(from: video!.publishedAt)
+        dateLb.text = DateFormatter.dateFormat(from: video!.publishedAt)
         
         //Set video thumbnail
         guard self.video!.thumbnail != "" else {return}
@@ -55,7 +53,6 @@ class VideoTableViewCell: UITableViewCell {
             self.thumbnailImgView.image = UIImage(data: cachedData)
             return
         }
-        
         
         //Download the thumbnail data
         let videoThumbnailURL = URL(string: self.video!.thumbnail)

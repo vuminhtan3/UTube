@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         model.delegate = self
-        registerCell(cellID: Constants.videoCellId)
+        registerCell(cellID: Constants.VIDEO_CELL_ID)
         model.getVideo()
     }
     
@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: cellID)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
 }
 
 //MARK: - Model Delegate
@@ -44,7 +47,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.videoCellId, for: indexPath) as! VideoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEO_CELL_ID, for: indexPath) as! VideoTableViewCell
         cell.setCell(videos[indexPath.row])
         
         
@@ -59,7 +62,16 @@ extension ViewController: UITableViewDataSource {
 
 //MARK: - TableView Delegate
 extension ViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let selectedVideo = videos[indexPath.row]
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.video = selectedVideo
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

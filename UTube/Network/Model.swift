@@ -17,8 +17,8 @@ class Model {
     
     func getVideo() {
         //Create URL
-        let url = URL(string: Constants.apiURL)
-        
+        let url = URL(string: Constants.API_URL)
+        print(url)
         guard url != nil else {
             return
         }
@@ -46,8 +46,8 @@ class Model {
                     DispatchQueue.main.async {
                         //Call videoFetched() of delegate
                         self.delegate?.videoFetched(response.items!)
+                        
                     }
-                    
                 }
                 
             } catch {
