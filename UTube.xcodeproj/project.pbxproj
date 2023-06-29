@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82D74A1E1A2CCCF2C85F3200 /* Pods_UTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C8D0DA72BB2D563F8934AC /* Pods_UTube.framework */; };
 		A9178D542AFEB72C58E177AA /* Pods_UTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67693A1D59F44DE74A57AFC0 /* Pods_UTubeTests.framework */; };
 		B435991A2A4776A300FF155E /* NetworkConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43599192A4776A300FF155E /* NetworkConstantsTemplate.swift */; };
 		B435991C2A477BDF00FF155E /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435991B2A477BDF00FF155E /* Video.swift */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D74A1E1A2CCCF2C85F3200 /* Pods_UTube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +278,8 @@
 			dependencies = (
 			);
 			name = UTube;
+			packageProductDependencies = (
+			);
 			productName = UTube;
 			productReference = B46D03052A445201006BBFA1 /* UTube.app */;
 			productType = "com.apple.product-type.application";
@@ -355,6 +355,8 @@
 				Base,
 			);
 			mainGroup = B46D02FC2A445201006BBFA1;
+			packageReferences = (
+			);
 			productRefGroup = B46D03062A445201006BBFA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -694,7 +696,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42823CRJW7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UTube/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -723,7 +725,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 42823CRJW7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UTube/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

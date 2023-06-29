@@ -23,7 +23,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="raA-Op-6Ot">
                                 <rect key="frame" x="0.0" y="0.0" width="348" height="195.66666666666666"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="raA-Op-6Ot" secondAttribute="height" multiplier="1280:720" id="CRO-Sm-Ian"/>
+                                    <constraint firstAttribute="width" secondItem="raA-Op-6Ot" secondAttribute="height" multiplier="1920:1080" id="CRO-Sm-Ian"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6I-Uv-nAZ">

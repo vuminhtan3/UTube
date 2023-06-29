@@ -11,7 +11,8 @@ import WebKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var webView: WKWebView!
+    
+    @IBOutlet weak var videoPlayer: YouTubePlayerView!
     @IBOutlet weak var titleLb: UILabel!
     @IBOutlet weak var viewsCountLb: UILabel!
     @IBOutlet weak var dateLb: UILabel!
@@ -36,6 +37,7 @@ class DetailViewController: UIViewController {
         setupChannelThumbnailsTapGesture()
         setupChannelTitleTapGesture()
         setupChannelSubTapGesture()
+        videoPlayer.delegate = self
         
         navigationController?.isNavigationBarHidden = false
     }
@@ -79,13 +81,14 @@ class DetailViewController: UIViewController {
         
         //Create the embed URL
         let embedURLString = "\(Constants.YT_EMBED_URL)\(video.videoId)"
-        
+
         //Load it into the webview
         let embedURL = URL(string: embedURLString)
         let request = URLRequest(url: embedURL!)
-        
-        webView.load(request)
-        
+        DispatchQueue.main.async {
+            self.videoPlayer.loadVideoID(video.videoId)
+        }
+       
         //Set Title
         titleLb.text = video.title
         channelTitleLb.text = video.channelTitle
@@ -95,7 +98,7 @@ class DetailViewController: UIViewController {
         
         descriptionTextView.text = video.description
     }
-    
+
     @IBAction func likeBtnTapped(_ sender: UIButton) {
     }
     
@@ -114,5 +117,12 @@ class DetailViewController: UIViewController {
     @IBAction func subscribeBtnTapped(_ sender: UIButton) {
     }
     
-    
+}
+extension DetailViewController: YouTubePlayerDelegate {
+    func playerReady(_ videoPlayer: YouTubePlayerView) {
+        DispatchQueue.main.async {
+            self.videoPlayer.play()
+        }
+        
+    }
 }

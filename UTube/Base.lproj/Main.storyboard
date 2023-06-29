@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="99" width="393" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8qY-fh-wAE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8qY-fh-wAE">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qY-fh-wAE" id="16q-GB-AVa">
@@ -121,22 +121,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LeD-Fz-DPE">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LeD-Fz-DPE">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8h-Ph-ajB">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivU-R0-U3Q" customClass="YouTubePlayerView" customModule="YouTubePlayer">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="c8h-Ph-ajB" secondAttribute="height" multiplier="1280:720" id="3K6-LZ-phn"/>
+                                            <constraint firstAttribute="width" secondItem="ivU-R0-U3Q" secondAttribute="height" multiplier="1920:1080" id="4Ek-j1-6Qp"/>
                                         </constraints>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTV-Un-Nqj">
-                                        <rect key="frame" x="0.0" y="226" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="222" width="393" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-kq-e4F">
                                                 <rect key="frame" x="10" y="0.0" width="373" height="50"/>
@@ -154,7 +150,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpL-9l-brq">
-                                        <rect key="frame" x="0.0" y="281" width="393" height="21"/>
+                                        <rect key="frame" x="0.0" y="273" width="393" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goU-2s-QSJ">
                                                 <rect key="frame" x="10" y="2" width="35.333333333333336" height="17"/>
@@ -185,7 +181,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lDU-wU-2xu">
-                                        <rect key="frame" x="0.0" y="307" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="295" width="393" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nq-tT-oX6">
                                                 <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="50"/>
@@ -200,6 +196,9 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal">
                                                             <imageReference key="image" image="hand.thumbsup" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <imageReference key="image" image="hand.thumbsup.fill" catalog="system" symbolScale="large"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="likeBtnTapped:" destination="9mb-aS-nbi" eventType="touchUpInside" id="azg-c1-QLn"/>
@@ -236,6 +235,9 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal">
                                                             <imageReference key="image" image="hand.thumbsdown" catalog="system" symbolScale="large"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <imageReference key="image" image="hand.thumbsdown.fill" catalog="system" symbolScale="large"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="dislikeBtnTapped:" destination="9mb-aS-nbi" eventType="touchUpInside" id="ja7-Z7-Q3h"/>
@@ -373,7 +375,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-fK-kIv">
-                                        <rect key="frame" x="0.0" y="362" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="346" width="393" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BL1-c1-8cn">
                                                 <rect key="frame" x="10" y="5" width="40" height="40"/>
@@ -427,10 +429,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRG-k3-5Ms">
-                                        <rect key="frame" x="0.0" y="417" width="393" height="342"/>
+                                        <rect key="frame" x="0.0" y="397" width="393" height="396"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="248" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="oNp-Mq-VRZ">
-                                                <rect key="frame" x="10" y="0.0" width="373" height="342"/>
+                                                <rect key="frame" x="10" y="0.0" width="373" height="396"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -456,10 +458,10 @@
                         <viewLayoutGuide key="safeArea" id="tZZ-ft-hfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tZZ-ft-hfT" firstAttribute="bottom" secondItem="LeD-Fz-DPE" secondAttribute="bottom" id="E3s-ry-HEs"/>
-                            <constraint firstItem="LeD-Fz-DPE" firstAttribute="leading" secondItem="tZZ-ft-hfT" secondAttribute="leading" id="MSN-aQ-FP1"/>
-                            <constraint firstItem="LeD-Fz-DPE" firstAttribute="top" secondItem="tZZ-ft-hfT" secondAttribute="top" id="U9D-st-fhe"/>
-                            <constraint firstItem="LeD-Fz-DPE" firstAttribute="trailing" secondItem="tZZ-ft-hfT" secondAttribute="trailing" id="zez-6Q-6zU"/>
+                            <constraint firstItem="LeD-Fz-DPE" firstAttribute="leading" secondItem="tZZ-ft-hfT" secondAttribute="leading" id="TJM-fL-d8T"/>
+                            <constraint firstAttribute="bottom" secondItem="LeD-Fz-DPE" secondAttribute="bottom" id="XFn-kc-2ko"/>
+                            <constraint firstItem="LeD-Fz-DPE" firstAttribute="top" secondItem="tZZ-ft-hfT" secondAttribute="top" id="qok-U2-YyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="LeD-Fz-DPE" secondAttribute="trailing" id="uMX-4z-oUn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -475,8 +477,8 @@
                         <outlet property="subscribeBtn" destination="wUR-Rd-6MP" id="MeT-gQ-8CR"/>
                         <outlet property="subscribesCountLb" destination="UGg-kR-xBd" id="hMm-WD-2TN"/>
                         <outlet property="titleLb" destination="cxq-kq-e4F" id="QPZ-Ys-HXX"/>
+                        <outlet property="videoPlayer" destination="ivU-R0-U3Q" id="EZZ-sz-6cg"/>
                         <outlet property="viewsCountLb" destination="goU-2s-QSJ" id="nZ7-LU-wco"/>
-                        <outlet property="webView" destination="c8h-Ph-ajB" id="ab6-vP-z6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRR-Ur-Fwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -489,7 +491,9 @@
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="hand.thumbsdown" catalog="system" width="123" height="128"/>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
         <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus.square.on.square" catalog="system" width="128" height="116"/>

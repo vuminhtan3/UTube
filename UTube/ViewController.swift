@@ -50,12 +50,6 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEO_CELL_ID, for: indexPath) as! VideoTableViewCell
         cell.setCell(videos[indexPath.row])
         
-        
-//        let title = self.videos[indexPath.row].title
-//        var config = UIListContentConfiguration.cell()
-//        config.text = title
-//        cell.contentConfiguration = config
-        
         return cell
     }
 }
